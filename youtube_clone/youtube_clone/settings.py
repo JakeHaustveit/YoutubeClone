@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'youtube_clone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql-connector-django',
+        'ENGINE': 'mysql.connector.django',
         'NAME': 'youtube_clone_database',
         'USER': 'root',
         'PASSWORD': 'password',
@@ -131,3 +131,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+try:
+    from youtube_clone.local_settings import *
+except ImportError:
+    pass
