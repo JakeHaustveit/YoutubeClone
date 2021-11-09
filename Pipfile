@@ -5,7 +5,9 @@ name = "pypi"
 
 [packages]
 django = "*"
-mysql-connector-python = "*"
+mysql-connector-python = "==8.0.26"
+"mysql.connector.python" = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
