@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e79128289b1e1d5053953a6c623f6173201762232096f15284e4ea31c54ab2ff"
+            "sha256": "2fe41ceeee7247ad4fe4fd77e885798d758f4785bfdb478e26d2eead658fb59d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -26,11 +26,11 @@
         },
         "django": {
             "hashes": [
-                "sha256:51284300f1522ffcdb07ccbdf676a307c6678659e1284f0618e5a774127a6a08",
-                "sha256:e22c9266da3eec7827737cde57694d7db801fedac938d252bf27377cec06ed1b"
+                "sha256:42573831292029639b798fe4d3812996bfe4ff3275f04566da90764daec011a5",
+                "sha256:f6d2c4069c9b9bfac03bedff927ea1f9e0d29e34525cec8a68fd28eb2a8df7af"
             ],
             "index": "pypi",
-            "version": "==3.2.9"
+            "version": "==3.2.8"
         },
         "djangorestframework": {
             "hashes": [
@@ -100,7 +100,7 @@
                 "sha256:fcfb722e748ec9219d5caee7c73855e93e67c7c57cd790e49d37c1c8571ba040"
             ],
             "index": "pypi",
-            "version": "==8.0.26"
+            "version": "==8.0.27"
         },
         "protobuf": {
             "hashes": [
