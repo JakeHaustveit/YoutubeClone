@@ -5,7 +5,7 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         'NAME': 'youtube_comments_database',
         'USER': 'root',
-        'PASSWORD': 'IloveBeau123!',
+        'PASSWORD': 'Packers1234',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
