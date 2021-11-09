@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'youtube',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +74,6 @@ WSGI_APPLICATION = 'youtube_clone.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 
 
 

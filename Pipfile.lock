@@ -100,7 +100,7 @@
                 "sha256:fcfb722e748ec9219d5caee7c73855e93e67c7c57cd790e49d37c1c8571ba040"
             ],
             "index": "pypi",
-            "version": "==8.0.27"
+            "version": "==8.0.26"
         },
         "protobuf": {
             "hashes": [
