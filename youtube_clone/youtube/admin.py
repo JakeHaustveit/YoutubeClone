@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CommentonComment, VideoComment, Video
+from .models import Comment, Reply
 
 # Register your models here.
-admin.site.register(CommentonComment, VideoComment, Video)
+admin.site.register(Comment, Reply)

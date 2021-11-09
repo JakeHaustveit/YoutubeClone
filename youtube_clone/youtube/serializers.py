@@ -1,19 +1,15 @@
 from django.db.models import fields
 from rest_framework import serializers
-from .models import CommentonComment, VideoComment, Video
+from .models import Comment, Reply
 
 
-class VideoSerializer(serializers.ModelSerializer):
+class CommentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Video
-        fields = [' videoId', 'likes', 'video_comment', 'dislikes']
+        model = Comment
+        fields = ['text', 'likes', 'videoId', 'dislikes']
 
-class VideoCommentSerializer(serializers.ModelSerializer):
+class ReplySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Video
-        fields = [' videoId', 'likes', 'video_comment', 'dislikes']
-
-class CommentonCommentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Video
-        fields = ['comment']        
+        model = Reply
+        fields = ['text', 'comment']
+     
