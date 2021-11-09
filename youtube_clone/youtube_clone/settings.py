@@ -120,7 +120,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-try:
+try: 
     from youtube_clone.local_settings import *
 except ImportError:
-    pass    
+    pass
+
