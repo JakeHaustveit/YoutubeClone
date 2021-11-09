@@ -1,17 +1,24 @@
 from django.db import models
+from django.db.models.deletion import CASCADE
 
 # Create your models here.
+
+class CommentonComment(models.Model):
+    comment= models.CharField(max_length=400)
+
+class VideoComment(models.Model):
+    comment= models.CharField(max_length=400)
+    comment_on_comment= models.ForeignKey(CommentonComment, on_delete=models.CASCADE)
+
+
 class Video(models.Model):
-    videoId= models.IntegerField()
+    videoId= models.CharField(max_length=400)
     likes= models.IntegerField(default=0)
-    comment= models.ForeignKey.CharField(max_length=400)
+    video_comment= models.ForeignKey(VideoComment, on_delete=models.CASCADE)
     dislikes= models.IntegerField(default=0)
 
 
 
-class VideoComment(models.Model):
-    comment= models.ForeignKey.CharField(max_length=400)
+
     
 
-class CommentonComment(models.Model):
-    comment= models.CharField(max_length=400)
