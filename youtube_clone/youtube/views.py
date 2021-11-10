@@ -11,7 +11,8 @@ from rest_framework import status
 class CommentList(APIView):
 
     def get(self, request):
-        comment = Comment.objects.all()
+        video_id_param = request.query_params.get('video_id')
+        comment = Comment.objects.filter(video_id=video_id_param)
         serializer = CommentSerializer(comment, many=True)
         return Response(serializer.data)
 
@@ -61,6 +62,32 @@ class ReplyList(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ReplyDetail(APIView):
+
+    def get_object(self, pk):
+        try:
+            return Reply.objects.get(pk=pk)
+        except Reply.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk):
+        reply = self.get_object(pk)
+        serializer = ReplySerializer(reply)
+        return Response(serializer.data)
+    
+    def put(self, request, pk):
+        reply = self.get_object(pk)
+        serializer = ReplySerializer(reply, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response (serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        reply = self.get_object(pk)
+        reply.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class CommentLikes(APIView):
