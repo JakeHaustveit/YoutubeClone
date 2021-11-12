@@ -6,8 +6,8 @@ from django.db.models.deletion import CASCADE
 class Comment(models.Model):
     text = models.CharField(max_length=400)
     video_id= models.CharField(max_length=400)
-    likes= models.IntegerField(default=0)
-    dislikes= models.IntegerField(default=0)
+    likes= models.IntegerField(default=0, )
+    dislikes= models.IntegerField(default=0, )
 
 class Reply(models.Model):
     text = models.CharField(max_length=400)
