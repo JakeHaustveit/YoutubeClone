@@ -60,6 +60,7 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+0001_initial.py
 
 # Flask stuff:
 instance/
@@ -127,3 +128,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+youtube_clone/youtube/migrations/0001_initial.py
+youtube_clone/youtube/migrations/0002_auto_20211109_1635.py
+youtube_clone/youtube/migrations/0003_rename_videoid_comment_video_id.py
+youtube_clone/youtube/migrations/0001_initial.py
+youtube_clone/youtube/migrations/0001_initial.py
