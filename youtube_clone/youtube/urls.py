@@ -8,6 +8,7 @@ urlpatterns = [
     path('videocomment/<str:id>/', views.CommentForVideo.as_view()),
     path('comment/<int:pk>/', views.CommentDetail.as_view()),
     path('reply/', views.ReplyList.as_view()),
+    path('reply/<int:id>/', views.ReplyForComment.as_view()),
     path('comment/<int:pk>/likes/', views.CommentLikes.as_view()),
     path('comment/<int:pk>/dislikes/', views.CommentDislikes.as_view())
 

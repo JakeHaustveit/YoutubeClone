@@ -28,6 +28,15 @@ class CommentForVideo(APIView):
         return Response(serializer.data)
 
 
+class ReplyForComment(APIView):
+
+    def get(self, request, id):
+        comment_reply= Reply.objects.filter(comment_id=id)
+        serializer = ReplySerializer(comment_reply, many=True)
+        return Response(serializer.data)
+
+
+
 class CommentDetail(APIView):
 
     def get_object(self, pk):
